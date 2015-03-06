@@ -1,0 +1,155 @@
+.post-list {
+  padding: @gutter*2 0 @gutter*2 0;
+}
+
+.posts {
+  padding: 0;
+
+  li {
+    display: block;
+    padding: 0 0 @gutter 0;
+    .clearfix();
+    .dots {
+        display: block;
+        padding-top: @gutter;
+        clear: both;
+        text-align: center;
+        span {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            .rounded(50%);
+            background-color: @lighttext;
+            &:nth-of-type(2) {
+                margin: 0 13px 0 13px;
+            }
+        }
+    }
+    &:last-of-type {
+        .dots {
+            display: none;
+        }
+    }  
+    p {
+      font-size: 1.2rem;      
+    }  
+  }
+
+  h3 {
+    position: relative;
+    padding: 0 0 0 0;
+    margin: 0;
+    .medium;
+    color: @red;
+
+    a {
+      color: @red;
+
+      &:hover {
+        color: @green;
+      }
+    }
+
+    .socialbar-like {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 0.85rem;
+      color: @lighttext;
+
+      &:hover {
+        color: @green;
+
+        span {
+          color: @green;
+        }
+      }
+
+      span {
+        color: @lighttext;
+      }
+
+    }
+  }
+
+  .post-author {
+    text-align: left;
+    padding: 5px 0 0 0;
+    .clearfix();
+    
+    .post-date {
+      .light();
+    }
+
+    .post-author-avatar {
+      @size: 30px;
+      display: block;
+      float: left;
+      width: @size;
+      height: @size;
+      .rounded(50%);
+      overflow: hidden;
+
+      img {
+        width: @size;
+        height: @size;
+      }
+    }
+
+    p {
+      float: left;
+      @size: 0.85rem;
+      font-size: @size;
+      padding: 3px 0 0 15px;
+      margin: 0;
+
+      span {
+        font-weight: bold;
+
+        &.post-date {
+          color: @lighttext;
+          font-weight: normal;
+        }
+
+        &.post-author-name {
+          font-size: 1rem;
+          .medium;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  border-top: 2px solid @hr;
+  padding: (@gutter / 2) 0 ;
+  font-size: 0.85rem;
+  .clearfix;
+
+  a {
+    display: block;
+    color: @lighttext;
+
+    &:hover {
+      color: @green;
+
+      span {
+        color: @green;
+      }
+    }
+
+    span {
+      color: @lighttext;
+    }
+  }
+
+  .prev {
+    float: left;
+    text-align: left;
+  }
+
+  .next {
+    float: right;
+    text-align: right;
+  }
+}

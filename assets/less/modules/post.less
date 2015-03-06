@@ -1,0 +1,143 @@
+.post {
+  display: block;
+  padding: @gutter*2 0 @gutter*3 0;
+  .clearfix();
+
+  h1 {
+    padding: 0 0 @gutter/2 0;
+    margin: 0;
+  }
+
+  h2, h3, h4 {
+    padding: (@gutter / 2) 0 (@gutter / 4) 0;
+    margin: 0;
+  }
+
+  .back {
+    display: inline-block;
+    font-size: 0.85rem;
+    margin-bottom: (@gutter / 2);
+
+    &:hover {
+      span {
+        color: @green;
+      }
+    }
+  }
+
+  .post-content {
+    .content(@gutter);
+    p, div, ul, li, b, i {
+      font-size: 1.2rem;
+      a {
+        color: @red;
+        text-decoration: underline;
+        &:hover {
+          color: @green;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      border: 2px solid @hr;
+      padding: 0;
+    }
+  }
+  .post-comments {
+    padding-top: @gutter;
+    display: block;
+    clear: both;
+  }
+  .post-footer {
+    display: block;
+    clear: both;
+    padding-top: @gutter;
+    .clearfix;
+
+    .post-author {
+      width: 50%;
+      float: left;
+      text-align: left;
+
+      .post-author-avatar {
+        @size: 50px;
+        display: block;
+        float: left;
+        width: @size;
+        height: @size;
+        .rounded(50%);
+        overflow: hidden;
+
+        img {
+          width: @size;
+          height: @size;
+        }
+      }
+
+      p {
+        float: left;
+        @size: 0.85rem;
+        font-size: @size;
+        padding: 0 0 0 20px;
+        margin: 0;
+
+        span {
+          font-weight: bold;
+
+          &.post-date {
+            color: @lighttext;
+            font-weight: normal;
+            display: block;
+            .light();
+          }
+
+          &.post-author-name {
+            font-size: 1rem;
+            .medium;
+          }
+        }
+      }
+    }
+
+    .post-options {
+      width: 50%;
+      float: right;
+      text-align: right;
+      list-style-type: none;
+
+      li {
+        float: right;
+        padding-left: @gutter/2;
+
+        a {
+          display: inline-block;
+
+          i {
+            position: relative;
+            top: 2px;
+          }
+
+          .phrase { margin-left: 4px; }
+        }
+
+        .options-label {
+          display: inline-block;
+          padding: @gutter/4 10px 0 0;
+          color: @lighttext;
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+
+  .post-video {
+    padding: (@gutter / 2) 0;
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      display: block;
+      border: 0;
+    }
+  }
+}
