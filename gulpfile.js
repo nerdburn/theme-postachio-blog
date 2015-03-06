@@ -19,7 +19,7 @@ gulp.task('default', function() {
 
   // uglify
   gulp.src('./assets/js/' + themeName + '.js')
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(rename(themeName + '.min.js'))          
     .pipe(gulp.dest('./assets/js/'));
   
