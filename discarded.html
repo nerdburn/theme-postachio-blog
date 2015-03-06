@@ -1,0 +1,19 @@
+<!-- home author -->
+<div class="post-author">
+  <a href="#" class="post-author-avatar"><img src="{{ post.author.avatar }}" /></a>
+  <p>
+    <span class="post-author-name">{{ post.author.name }}</span>
+    <span class="post-date">on {{ post.created_at|format_date }}</span>
+  </p>
+</div>
+
+<!-- post author -->
+<div class="post-footer">
+  <div class="post-author">
+    <a href="#" class="post-author-avatar"><img src="{{ post.author.avatar }}" /></a>
+    <p>
+      <span class="post-author-name">{{ post.author.name }}</span>
+      <span class="post-date">Posted on {{ post.created_at|format_date }}</span>
+    </p>
+  </div>
+</div>
