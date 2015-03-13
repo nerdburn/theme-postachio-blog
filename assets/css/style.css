@@ -587,6 +587,9 @@ a.btn.centered {
   clear: both;
   height: 0;
 }
+.posts li img {
+  width: 100%;
+}
 .posts li .dots {
   display: block;
   padding-top: 50px;
